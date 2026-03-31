@@ -59,7 +59,7 @@ MIDAR is constructed to simulate realistic AR interactions in which users rely o
 - **Cooking**
 
 <figure>
-  <img src=dataset example large.png" alt="Description" width="1200"/>
+  <img src="./dataset_example_large.png" alt="Description" width="1200"/>
   <figcaption align="center"> ??? </figcaption>
 </figure>
 
