@@ -61,7 +61,7 @@ MIDAR is constructed to simulate realistic AR interactions in which users rely o
 
 <figure>
   <img src="./dataset_example_large.png" alt="Description" width="1200" />
-  <figcaption align="center">Dataset examples from MIDAR.</figcaption>
+  <figcaption align="center"> Example screenshots, audio instructions, user tasks, and video labels from MIDAR across different AR application scenarios: (a) navigation, (b) safety inspection, (c) smart home, (d) smart retail, (e) AR-guided labor, and (f) AR-guided cooking. </figcaption>
 </figure>
 
 
