@@ -271,24 +271,6 @@ The benchmark shows that multimodal inconsistency detection in AR is **challengi
 | Mistral-Small-3.1-24B | Frame-sampling | 59.13 | 74.78 | 27.56 | 9.93 |
 | CLIP | Feature-similarity | 51.76 | 56.96 | 14.42 | 1.78 |
 
-## Qualitative Examples
-
-### Example Samples
-
-**[Placeholder for qualitative examples figure]**
-
-Suggested caption:
-
-> Example screenshots from MIDAR across different application domains, showing user tasks, audio instructions, and consistency labels.
-
-### Failure Cases
-
-**[Placeholder for failure case figure]**
-
-Suggested caption:
-
-> Representative failure cases of multimodal inconsistency detection, including over-reasoning, fine-grained attribute confusion, and spatial grounding errors.
-
 
 ## Recommended Usage
 
