@@ -17,7 +17,7 @@ MIDAR contains **624 egocentric AR videos** collected across **6 application dom
 - **3 inconsistency types**
 - **Balanced labels**
 - **Egocentric AR recordings**
-- **JSON metadata** for each sample
+- **JSON/JSONL metadata** for each sample
 
 <figure>
   <img src="./dataset_example_large.png" alt="Description" width="1200" />
@@ -54,14 +54,8 @@ Audio says *“Turn left”*, while the visual cue indicates forward or right.
 
 ## Dataset Description
 
-MIDAR is constructed to simulate realistic AR interactions in which users rely on both **visual overlays** and **spoken audio guidance** to complete tasks. The dataset focuses on common AR assistance settings and covers the following representative domains:
-
-- **Navigation**
-- **Safety**
-- **Home**
-- **Retail**
-- **Labor**
-- **Cooking**
+MIDAR is constructed to simulate realistic AR interactions in which users rely on both **visual overlays** and **spoken audio guidance** to complete tasks. The dataset focuses on common AR assistance settings and covers the following representative domains: **Navigation**, **Safety**, **Home**, **Retail**, **Labor**
+and **Cooking**.
 
 
 Each video captures the user’s **first-person AR view** during task execution. The virtual cue and audio instruction are intentionally designed to be either:
@@ -75,56 +69,15 @@ All videos are recorded at:
 - **Frame rate:** 30 FPS
 - **Duration:** 5–18 seconds
 
-Each sample is accompanied by metadata including:
-
-- video path
-- video duration
-- inconsistency label
-- virtual visual cue description
-- audio transcription
-- user task
-
 ---
 
 ## Video Collection Pipeline
 
-MIDAR is built through a controlled AR data collection pipeline.
+MIDAR is collected through a controlled AR data acquisition process. For each scene, we first define a user task and then design the corresponding multimodal guidance, including a visual AR cue and an audio instruction. Each scene is constructed to represent one of three inconsistency types: **reference**, **attribute**, or **spatial**. For every inconsistent case, we also create a matched consistent version to maintain a balanced dataset.
 
-### Step 1: Scene Design
-For each AR scene, a task is defined first. Then, the corresponding multimodal guidance is designed:
+During recording, the virtual visual cue is placed in the scene but remains invisible at the beginning. Each video starts with only the real-world environment visible. At a selected time point, the visual cue is activated and the corresponding audio instruction is played simultaneously. This synchronized onset is intentional, as temporally aligned cross-modal signals are more likely to be perceived as related by human users.
 
-- a **visual AR cue**
-- an **audio instruction**
-
-The two modalities are created to support either a **consistent** case or an **inconsistent** case.
-
-### Step 2: Inconsistency Design
-Each scene is designed to include one of the following inconsistency types:
-
-- reference
-- attribute
-- spatial
-
-For every inconsistent scene, a corresponding consistent version is also created to maintain balanced labels.
-
-### Step 3: Recording Procedure
-During recording:
-
-1. the virtual visual cue is placed at the designated location in the scene but remains **invisible** at the beginning;
-2. recording starts with only the **real-world environment** visible;
-3. at a chosen time point, the virtual visual cue is **activated**;
-4. the corresponding audio instruction is played **simultaneously**.
-
-This synchronized onset is intentional, since temporally aligned cross-modal signals are more likely to be perceived as related by human observers.
-
-### Step 4: Hardware and Software
-Data are collected using:
-
-- **Meta Quest 3** as the AR platform
-- **Unity 2022.3.61f1** for AR application development
-- **ARCore** for spatial tracking
-
-Videos are captured using the headset’s built-in screen recording so that the recordings reflect the user’s **actual egocentric AR experience**.
+All data are collected using **Meta Quest 3**. The AR applications are developed in **Unity 2022.3.61f1** with **ARCore** for spatial tracking. Videos are captured using the headset’s built-in screen recording, ensuring that each sample reflects the user’s actual egocentric AR experience.
 
 ---
 
@@ -222,7 +175,6 @@ A JSON file is provided to facilitate dataset usage and benchmarking.
 {
   "video_path": "MIDAR/navigation/reference/A-001-1.mp4",
   "duration": 8.4,
-  "label": "A",
   "inconsistency": true,
   "domain": "navigation",
   "type": "reference",
@@ -238,7 +190,6 @@ A JSON file is provided to facilitate dataset usage and benchmarking.
 |---|---|
 | `video_path` | Relative path to the video |
 | `duration` | Video duration in seconds |
-| `label` | `A` for inconsistent and `N` for consistent |
 | `inconsistency` | Boolean version of the label |
 | `domain` | Application domain |
 | `type` | Inconsistency type |
@@ -258,7 +209,7 @@ In our benchmark, multiple pipelines were evaluated, including:
 
 The benchmark shows that multimodal inconsistency detection in AR is **challenging rather than trivial**, especially for spatial inconsistencies.
 
-## Benchmark Results
+### Benchmark Results
 
 | Method | Input Type | All Accuracy | All Precision | All Recall | Avg. Latency (s) |
 |---|---|---:|---:|---:|---:|
