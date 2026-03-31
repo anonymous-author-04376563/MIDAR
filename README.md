@@ -19,6 +19,11 @@ MIDAR contains **624 egocentric AR videos** collected across **6 application dom
 - **Egocentric AR recordings**
 - **JSON metadata** for each sample
 
+<figure>
+  <img src="./dataset_example_large.png" alt="Description" width="1200" />
+  <figcaption align="center"> Example screenshots, audio instructions, user tasks, and video labels from MIDAR across different AR application scenarios: (a) navigation, (b) safety inspection, (c) smart home, (d) smart retail, (e) AR-guided labor, and (f) AR-guided cooking. </figcaption>
+</figure>
+
 ---
 
 ## What Is Multimodal Inconsistency?
@@ -57,12 +62,6 @@ MIDAR is constructed to simulate realistic AR interactions in which users rely o
 - **Retail**
 - **Labor**
 - **Cooking**
-
-
-<figure>
-  <img src="./dataset_example_large.png" alt="Description" width="1200" />
-  <figcaption align="center"> Example screenshots, audio instructions, user tasks, and video labels from MIDAR across different AR application scenarios: (a) navigation, (b) safety inspection, (c) smart home, (d) smart retail, (e) AR-guided labor, and (f) AR-guided cooking. </figcaption>
-</figure>
 
 
 Each video captures the user’s **first-person AR view** during task execution. The virtual cue and audio instruction are intentionally designed to be either:
