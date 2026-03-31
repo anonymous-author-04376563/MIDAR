@@ -106,64 +106,36 @@ All data are collected using **Meta Quest 3**. The AR applications are developed
 
 ## Dataset Structure
 
-The dataset is organized as follows:
+The dataset is organized by **application domain** and **inconsistency type**:
 
 ```text
 MIDAR/
 ├── Navigation/
-│   ├── Reference/
-│   ├── Attribute/
-│   └── Spatial/
 ├── Safety/
-│   ├── Reference/
-│   ├── Attribute/
-│   └── Spatial/
 ├── Home/
-│   ├── Reference/
-│   ├── Attribute/
-│   └── Spatial/
 ├── Retail/
-│   ├── Reference/
-│   ├── Attribute/
-│   └── Spatial/
 ├── Labor/
-│   ├── Reference/
-│   ├── Attribute/
-│   └── Spatial/
 └── Cooking/
     ├── Reference/
     ├── Attribute/
     └── Spatial/
 ```
 
-## File Naming Rule
+Each video file follows the naming format **`{A|N}-{xxx}-{y}`**, where **`A`** denotes an inconsistent sample, **`N`** denotes a consistent sample, **`xxx`** is the three-digit scene sequence number, and **`y`** is the one-digit video index.
 
-Each video file follows the naming format:
-
-`{A|N}-{xxx}-{y}`
-
-where:
-
-- `A` = inconsistent sample
-- `N` = consistent sample
-- `xxx` = three-digit scene sequence number
-- `y` = one-digit video index
-
-## Full Path Pattern
+The full path pattern is:
 
 `MIDAR/{domain}/{inconsistency_type}/{A|N}-{xxx}-{y}.mp4`
 
-where:
+where `{domain}` ∈ `{Navigation, Safety, Home, Retail, Labor, Cooking}` and `{inconsistency_type}` ∈ `{Reference, Attribute, Spatial}`.
 
-- `{domain}` ∈ `{Navigation, Safety, Home, Retail, Labor, Cooking}`
-- `{inconsistency_type}` ∈ `{Reference, Attribute, Spatial}`
+Examples:
 
-## Examples
+- `MIDAR/Navigation/Reference/A-001-1.mp4`
+- `MIDAR/Home/Attribute/A-037-1.mp4`
+- `MIDAR/Cooking/Spatial/N-104-3.mp4`
 
-- `MIDAR/navigation/reference/A-001-1.mp4`
-- `MIDAR/navigation/reference/N-001-2.mp4`
-- `MIDAR/home/attribute/A-037-1.mp4`
-- `MIDAR/cooking/spatial/N-104-3.mp4`
+---
 
 ## Metadata Format
 
@@ -197,6 +169,8 @@ A JSON file is provided to facilitate dataset usage and benchmarking.
 | `audio_transcript` | Transcribed spoken instruction |
 | `task` | User task associated with the sample |
 
+---
+
 ## Result Highlights
 
 MIDAR is designed for benchmarking multimodal inconsistency detection systems in AR.
@@ -221,18 +195,17 @@ The benchmark shows that multimodal inconsistency detection in AR is **challengi
 | Mistral-Small-3.1-24B | Frame-sampling | 59.13 | 74.78 | 27.56 | 9.93 |
 | CLIP | Feature-similarity | 51.76 | 56.96 | 14.42 | 1.78 |
 
+---
+
 
 ## Recommended Usage
 
 MIDAR can support research on:
 
-- multimodal inconsistency detection
+- Multimodal inconsistency detection
 - AR scene understanding
-- egocentric AR video analysis
-- multimodal reasoning
-- safety and reliability in AR
-- cross-modal grounding
-- audio-visual contradiction detection
+- Egocentric AR video analysis
+- Safety and reliability in AR
 
 
 
