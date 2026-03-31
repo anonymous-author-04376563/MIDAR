@@ -157,30 +157,30 @@ The dataset is organized as follows:
 
 ```text
 MIDAR/
-├── navigation/
-│   ├── reference/
-│   ├── attribute/
-│   └── spatial/
-├── safety/
-│   ├── reference/
-│   ├── attribute/
-│   └── spatial/
-├── home/
-│   ├── reference/
-│   ├── attribute/
-│   └── spatial/
-├── retail/
-│   ├── reference/
-│   ├── attribute/
-│   └── spatial/
+├── Navigation/
+│   ├── Reference/
+│   ├── Attribute/
+│   └── Spatial/
+├── Safety/
+│   ├── Reference/
+│   ├── Attribute/
+│   └── Spatial/
+├── Home/
+│   ├── Reference/
+│   ├── Attribute/
+│   └── Spatial/
+├── Retail/
+│   ├── Reference/
+│   ├── Attribute/
+│   └── Spatial/
 ├── Labor/
-│   ├── reference/
-│   ├── attribute/
-│   └── spatial/
-└── cooking/
-    ├── reference/
-    ├── attribute/
-    └── spatial/
+│   ├── Reference/
+│   ├── Attribute/
+│   └── Spatial/
+└── Cooking/
+    ├── Reference/
+    ├── Attribute/
+    └── Spatial/
 ```
 
 ## File Naming Rule
@@ -202,8 +202,8 @@ where:
 
 where:
 
-- `{domain}` ∈ `{navigation, safety, Home, retail, Labor, cooking}`
-- `{inconsistency_type}` ∈ `{reference, attribute, spatial}`
+- `{domain}` ∈ `{Navigation, Safety, Home, Retail, Labor, Cooking}`
+- `{inconsistency_type}` ∈ `{Reference, Attribute, Spatial}`
 
 ## Examples
 
