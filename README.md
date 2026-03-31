@@ -64,6 +64,7 @@ MIDAR is constructed to simulate realistic AR interactions in which users rely o
   <figcaption align="center">Dataset examples from MIDAR.</figcaption>
 </figure>
 
+
 Each video captures the user’s **first-person AR view** during task execution. The virtual cue and audio instruction are intentionally designed to be either:
 
 - **consistent** with each other, or
