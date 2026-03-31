@@ -67,7 +67,7 @@ All videos are recorded at:
 
 - **Resolution:** 1920 × 1080
 - **Frame rate:** 30 FPS
-- **Duration:** 5–18 seconds
+- **Duration:** 5–15 seconds
 
 ---
 
