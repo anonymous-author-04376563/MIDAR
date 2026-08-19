@@ -170,7 +170,7 @@ A JSON file is provided to facilitate dataset usage and benchmarking.
 | `task` | User task associated with the sample |
 
 ---
-
+<!--
 ## Result Highlights
 
 MIDAR is designed for benchmarking multimodal inconsistency detection systems in AR.
@@ -195,9 +195,9 @@ The benchmark shows that multimodal inconsistency detection in AR is **challengi
 | Mistral-Small-3.1-24B | Frame-sampling | 59.13 | 74.78 | 27.56 | 9.93 |
 | CLIP | Feature-similarity | 51.76 | 56.96 | 14.42 | 1.78 |
 
+-->
+
 ---
-
-
 ## Recommended Usage
 
 MIDAR can support research on:
