@@ -20,7 +20,7 @@ MIDAR contains **624 egocentric AR videos** collected across **6 application dom
 - **JSON/JSONL metadata** for each sample
 
 <figure>
-  <img src="./dataset_example_large.png" alt="Description" width="1200" />
+  <img src="./dataset_example.png" alt="Description" width="1200" />
   <figcaption align="center"> Example screenshots, audio instructions, user tasks, and video labels from MIDAR across different AR application scenarios: (a) navigation, (b) safety inspection, (c) smart home, (d) smart retail, (e) AR-guided labor, and (f) AR-guided cooking. </figcaption>
 </figure>
 
