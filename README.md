@@ -1,5 +1,5 @@
 # MIDAR: Multimodal Inconsistency Dataset for Augmented Reality
-This is the official repository of the paper "When Eyes and Ears Disagree: Detecting Multimodal Inconsistencies in Augmented Reality", submitted to IEEE ISMAR 2025. It introduces AR-VIM, a dataset of 624 egocentric videos.
+This is the official repository of the paper "When Eyes and Ears Disagree: Detecting Multimodal Inconsistencies in Augmented Reality", submitted to IEEE VR 2027. It introduces AR-VIM, a dataset of 624 egocentric videos.
 
 The dataset can be accesssed through this [link](https://drive.google.com/drive/folders/16ARNoCDM4d32V49GFdMH9w4FUnFNDPX1?usp=sharing).
 
